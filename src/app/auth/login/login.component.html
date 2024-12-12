@@ -21,9 +21,9 @@
               </nz-form-control>
             </nz-form-item>
             <button nz-button class="login-form-button">LOG IN</button>
-            <div class="login-forgot">Forgot <span> Username/Password ?</span></div>
+            <div class="login-forgot">Forgot <span (click)="navigateForgot()"> Username/Password ?</span></div>
           </form>
-          <span class="login-register">Create your Account <span nz-icon nzType="swap-right" nzTheme="outline"></span></span>
+          <span class="login-register" (click)="navigateRegister()">Create your Account <span nz-icon nzType="swap-right" nzTheme="outline"></span></span>
         </div>
       </div>
     </nz-content>

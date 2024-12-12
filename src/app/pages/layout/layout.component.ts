@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { SharedModule } from '../../common/common.module';
+import { Component } from '@angular/core'
+import { SharedModule } from '../../common/common.module'
+import { Router } from '@angular/router'
 
 @Component({
   standalone: true,
@@ -9,37 +10,43 @@ import { SharedModule } from '../../common/common.module';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
-  isCollapsed = false;
+  constructor(private router: Router) {}
+  isCollapsed = false
   menu: any[] = [
     {
-      value: "/dashboard",
-      title: "Dashboard",
-      icon: "dashboard",
+      value: '/dashboard',
+      title: 'Dashboard',
+      icon: 'dashboard',
       children: [
         {
-          value: "/welcome",
-          title: "Welcome1",
+          value: 'exercise',
+          title: 'Exercise'
         },
         {
-          value: "/monitor",
-          title: "Monitor",
+          value: '/monitor',
+          title: 'Monitor'
         },
         {
-          value: "/workplace",
-          title: "Workplace",
-        },
-      ],
+          value: '/workplace',
+          title: 'Workplace'
+        }
+      ]
     },
     {
-      value: "/form",
-      title: "Form",
-      icon: "form",
+      value: '/form',
+      title: 'Form',
+      icon: 'form',
       children: [
         {
-          value: "/basic-form",
-          title: "Basic Form",
-        },
-      ],
-    },
-  ];
+          value: '/basic-form',
+          title: 'Basic Form'
+        }
+      ]
+    }
+  ]
+
+  onLogout() {
+    localStorage.removeItem('user_credentials')
+    this.router.navigate(['/auth/login'])
+  }
 }
