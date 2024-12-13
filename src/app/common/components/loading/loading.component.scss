@@ -21,7 +21,7 @@
       @include icon-svg(
         20px,
         20px,
-        "/assets/images/loading/loading-button.svg"
+        "/loading-button.svg"
       );
     }
     .loading-section {
@@ -29,7 +29,7 @@
       @include icon-svg(
         20px,
         20px,
-        "/assets/images/loading/loading-section.png"
+        "/loading-section.png"
       );
     }
     .loading-all-page {
@@ -37,12 +37,12 @@
       @include icon-svg(
         160px,
         160px,
-        "/assets/images/loading/loading-all-page.png"
+        "/loading-all-page.png"
       );
     }
     .loading-all-page-logo {
       position: absolute;
-      @include icon-svg(96px, 54px, "/assets/images/loading/logo_viettel.svg");
+      @include icon-svg(96px, 54px, "/logo.svg");
     }
   }
   
