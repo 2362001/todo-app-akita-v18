@@ -1,0 +1,73 @@
+@mixin icon-svg($w, $h, $url) {
+    background: url($url) no-repeat;
+    background-size: $w $h;
+    min-width: $w;
+    min-height: $h;
+  }
+  
+  .loading {
+    z-index: 9999;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loading-button {
+      animation: spin 1000ms linear infinite;
+      @include icon-svg(
+        20px,
+        20px,
+        "/assets/images/loading/loading-button.svg"
+      );
+    }
+    .loading-section {
+      animation: spin 1000ms linear infinite;
+      @include icon-svg(
+        20px,
+        20px,
+        "/assets/images/loading/loading-section.png"
+      );
+    }
+    .loading-all-page {
+      animation: spin 1500ms linear infinite;
+      @include icon-svg(
+        160px,
+        160px,
+        "/assets/images/loading/loading-all-page.png"
+      );
+    }
+    .loading-all-page-logo {
+      position: absolute;
+      @include icon-svg(96px, 54px, "/assets/images/loading/logo_viettel.svg");
+    }
+  }
+  
+  .show-loading {
+    visibility: unset;
+  }
+  
+  .text-loading {
+    width: 100%;
+    position: absolute;
+    top: 75%;
+    text-align: center;
+    color: var(--1-primary-p-2100, #e5e5e7);
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  

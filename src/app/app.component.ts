@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SharedModule } from './common/common.module';
+import { LoadingComponent } from "./common/components/loading/loading.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SharedModule],
+  imports: [SharedModule, LoadingComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
