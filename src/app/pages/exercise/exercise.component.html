@@ -1,2 +1,5 @@
-<p>exercise works!</p>
-<img src="loading-all-page.png" alt="anh">
+<div class="grid grid-cols-3 gap-4">
+  <div *ngFor="let item of allListSubject">
+    <app-board [subject]="item"></app-board>
+  </div>
+</div>

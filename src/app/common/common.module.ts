@@ -9,7 +9,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 @NgModule({
   declarations: [],
   imports: [
@@ -25,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NzInputModule,
     NzCheckboxModule,
     NzButtonModule,
+    NzAvatarModule,
     ReactiveFormsModule
   ],
 })

@@ -47,7 +47,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
         this.router.navigate([commonRoute.HOME])
       }
       this.commonService.openNotification(TYPE_NOTIFICATION.SUCCESS, 'Success', 'Create Success')
-      // this.loading.isLoading.next(false)
+      this.loading.isLoading.next(false)
     } else {
       Object.values(this.loginForm.controls).forEach((control: any) => {
         if (control.invalid) {
