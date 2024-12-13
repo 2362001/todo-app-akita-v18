@@ -13,12 +13,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule, // Import các module cần thiết cho nội bộ SharedModule (nếu có)
+    CommonModule, 
   ],
   exports: [
-    CommonModule, // Export CommonModule để các module khác có thể dùng
-    RouterModule, // Export RouterModule để dùng được RouterLink, RouterOutlet
-    NzIconModule, // Export các module của thư viện bên ngoài
+    CommonModule, 
+    RouterModule, 
+    NzIconModule, 
     NzLayoutModule,
     NzMenuModule,
     NzFormModule,
