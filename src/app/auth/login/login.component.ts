@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
 import { NonNullableFormBuilder, Validators } from '@angular/forms';
 import { SharedModule } from '../../common/common.module';
 import { Router } from '@angular/router';
 import { commonRoute } from '../../common/route';
+import { BaseComponent } from '../../common/base-component';
+import { TYPE_NOTIFICATION } from '../../../utils';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -10,19 +12,21 @@ import { commonRoute } from '../../common/route';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent implements OnInit  {
+export class LoginComponent extends BaseComponent implements OnInit  {
   loginForm: any;
-  constructor(public fb: NonNullableFormBuilder , 
-    public router : Router
+  constructor(
+    injector : Injector
   ) {
-  }
-  
-  ngOnInit(): void {
+    super(injector)
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]],
       remember: [true]
     });
+  }
+  
+  override ngOnInit() {
+   
   }
 
   navigateForgot(){}
@@ -42,18 +46,7 @@ export class LoginComponent implements OnInit  {
         }));
         this.router.navigate([commonRoute.HOME]);
       }
-      // You can add your login logic here
-      // Example: 
-      // this.authService.login(formValue.username, formValue.password).subscribe({
-      //   next: (response) => {
-      //     // Handle successful login
-      //     this.router.navigate(['/dashboard']);
-      //   },
-      //   error: (error) => {
-      //     // Handle login error
-      //     console.error('Login failed:', error);
-      //   }
-      // });
+      this.commonService.openNotification(TYPE_NOTIFICATION.SUCCESS, "Success", "Create Success")
     } else {
       Object.values(this.loginForm.controls).forEach((control :any) => {
         if (control.invalid) {
