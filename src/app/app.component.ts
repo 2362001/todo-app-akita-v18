@@ -11,7 +11,6 @@ import { LoadingComponent } from "./common/components/loading/loading.component"
 })
 export class AppComponent {
   isCollapsed = false;
- 
   menu: any[] = [
     {
       value: "/dashboard",
