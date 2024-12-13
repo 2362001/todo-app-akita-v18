@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './exercise.component.scss'
 })
 export class ExerciseComponent {
-
+  constructor(){
+  }
 }
