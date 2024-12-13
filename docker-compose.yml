@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  frontend:
+    restart: always
+    image: hub.viettelcybersecurity.com/mass-platform/mass-platform-fe:dev
+    container_name: mass-platform-frontend
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8000:80
+    volumes:
+      - ./config.json:/usr/share/nginx/html/assets/config.json

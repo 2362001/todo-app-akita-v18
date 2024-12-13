@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { NzNotificationService } from "ng-zorro-antd/notification";
-import { TYPE_NOTIFICATION } from "../../../utils";
+import { TYPE_NOTIFICATION } from "../utils";
 
 @Injectable({
     providedIn:"root"

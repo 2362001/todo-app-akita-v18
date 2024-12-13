@@ -4,7 +4,7 @@ import { SharedModule } from '../../common/common.module';
 import { Router } from '@angular/router';
 import { commonRoute } from '../../common/route';
 import { BaseComponent } from '../../common/base-component';
-import { TYPE_NOTIFICATION } from '../../../utils';
+import { TYPE_NOTIFICATION } from '../../common/utils';
 @Component({
   selector: 'app-login',
   standalone: true,
