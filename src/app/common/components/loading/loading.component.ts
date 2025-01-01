@@ -16,7 +16,6 @@ export class LoadingComponent {
     @Input() speed! : number
     constructor(private loadingService : LoadingService ){
       this.loadingService.isLoading.subscribe(res => {
-        console.log(res)
         this.isloading = res
       })
     }

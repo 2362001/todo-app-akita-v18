@@ -23,12 +23,16 @@ export class LayoutComponent {
           title: 'Exercise'
         },
         {
-          value: '/monitor',
+          value: 'monitor',
           title: 'Monitor'
         },
         {
-          value: '/workplace',
+          value: 'workplace',
           title: 'Workplace'
+        },
+        {
+          value: 'testpaging',
+          title: 'Paging'
         }
       ]
     },

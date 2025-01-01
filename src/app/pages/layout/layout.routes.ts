@@ -5,28 +5,33 @@ export const LAYOUT_ROUTES: Route[] = [
   {
     path: '',
     loadComponent() {
-      return import('../layout/layout.component').then((m) => m.LayoutComponent)
+      return import('../layout/layout.component').then((m) => m.LayoutComponent);
     },
     canActivate: [AuthGuard],
     children: [
       {
+        path: '',
+        redirectTo: 'exercise', // Đặt route mặc định
+        pathMatch: 'full', // Đảm bảo chỉ khớp chính xác đường dẫn trống
+      },
+      {
         path: 'exercise',
         loadComponent() {
-          return import('../exercise/exercise.component').then((m) => m.ExerciseComponent)
-        }
+          return import('../exercise/exercise.component').then((m) => m.ExerciseComponent);
+        },
       },
       {
         path: 'results-exercise',
         loadComponent() {
-          return import('../exercise/exercise.component').then((m) => m.ExerciseComponent)
-        }
+          return import('../exercise/exercise.component').then((m) => m.ExerciseComponent);
+        },
       },
       {
-        path: 'setting',
+        path: 'testpaging',
         loadComponent() {
-          return import('../exercise/exercise.component').then((m) => m.ExerciseComponent)
-        }
-      }
-    ]
-  }
-]
+          return import('../test-paging-table/test-paging-table.component').then((m) => m.TestPagingTableComponent);
+        },
+      },
+    ],
+  },
+];
