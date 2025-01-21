@@ -32,6 +32,12 @@ export const LAYOUT_ROUTES: Route[] = [
           return import('../test-paging-table/test-paging-table.component').then((m) => m.TestPagingTableComponent);
         },
       },
+      {
+        path: 'testcontrolaccessor',
+        loadComponent() {
+          return import('../test-control-value-accessor/test-control-value-accessor.component').then((m) => m.TestControlValueAccessorComponent);
+        },
+      },
     ],
   },
 ];

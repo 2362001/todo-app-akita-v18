@@ -20,33 +20,29 @@ export class LayoutComponent {
       children: [
         {
           value: 'exercise',
-          title: 'Exercise'
-        },
-        {
-          value: 'monitor',
-          title: 'Monitor'
-        },
-        {
-          value: 'workplace',
-          title: 'Workplace'
+          title: 'Quản lý dòng tiền'
         },
         {
           value: 'testpaging',
-          title: 'Paging'
-        }
+          title: 'Phân trang'
+        },
+        {
+          value: 'testcontrolaccessor',
+          title: 'Test Control Form'
+        },
       ]
     },
-    {
-      value: '/form',
-      title: 'Form',
-      icon: 'form',
-      children: [
-        {
-          value: '/basic-form',
-          title: 'Basic Form'
-        }
-      ]
-    }
+    // {
+    //   value: '/form',
+    //   title: 'Form',
+    //   icon: 'form',
+    //   children: [
+    //     {
+    //       value: '/basic-form',
+    //       title: 'Basic Form'
+    //     }
+    //   ]
+    // }
   ]
 
   onLogout() {
