@@ -1,0 +1,9 @@
+<ng-template #content><app-weather-content></app-weather-content></ng-template>
+
+<div>
+  <ng-container #container></ng-container>
+  <div [className]="'button-container'">
+    <button [className]="'button'" (click)="createComponent()">Create Component</button>
+    <button [className]="'button'" (click)="destroyComponent()">Delete Component</button>
+  </div>
+</div>

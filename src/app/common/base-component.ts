@@ -7,7 +7,8 @@ import { CommonService } from './services/common.service'
 import { LoadingService } from './services/loading.service'
 
 @Component({
-  template: ''
+    template: '',
+    standalone: false
 })
 export class BaseComponent implements OnInit , OnDestroy{
   commonService : CommonService

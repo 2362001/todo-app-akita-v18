@@ -3,11 +3,10 @@ import { SharedModule } from '../../common/common.module'
 import { Router } from '@angular/router'
 
 @Component({
-  standalone: true,
-  selector: 'app-layout',
-  imports: [SharedModule],
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+    selector: 'app-layout',
+    imports: [SharedModule],
+    templateUrl: './layout.component.html',
+    styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
   constructor(private router: Router) {}
@@ -33,6 +32,10 @@ export class LayoutComponent {
         {
           value: 'testpaging',
           title: 'Paging'
+        },
+        {
+          value: 'test-dynamic-component',
+          title: 'Dynamic Component'
         }
       ]
     },

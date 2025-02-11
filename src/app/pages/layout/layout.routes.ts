@@ -32,6 +32,12 @@ export const LAYOUT_ROUTES: Route[] = [
           return import('../test-paging-table/test-paging-table.component').then((m) => m.TestPagingTableComponent);
         },
       },
+      {
+        path: 'test-dynamic-component',
+        loadComponent() {
+          return import('../test-dynamic-component/test-dynamic-component.component').then((m) => m.TestDynamicComponentComponent);
+        },
+      },
     ],
   },
 ];

@@ -6,11 +6,10 @@ import { commonRoute } from '../../common/route'
 import { BaseComponent } from '../../common/base-component'
 import { TYPE_NOTIFICATION } from '../../common/utils'
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+    selector: 'app-login',
+    imports: [SharedModule],
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.scss'
 })
 export class LoginComponent extends BaseComponent implements OnInit {
   loginForm: any

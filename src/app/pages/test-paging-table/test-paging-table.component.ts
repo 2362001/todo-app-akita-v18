@@ -5,11 +5,10 @@ import { SortingInterface, UserInterface, UsersServiceService } from './users-se
 import { log } from 'console';
 
 @Component({
-  selector: 'app-test-paging-table',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './test-paging-table.component.html',
-  styleUrl: './test-paging-table.component.scss'
+    selector: 'app-test-paging-table',
+    imports: [SharedModule],
+    templateUrl: './test-paging-table.component.html',
+    styleUrl: './test-paging-table.component.scss'
 })
 export class TestPagingTableComponent {
   columns: Array<keyof UserInterface> = ['id', 'name', 'age'];

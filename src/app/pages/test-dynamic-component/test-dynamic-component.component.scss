@@ -1,0 +1,11 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 10px;
+  color: white;
+  background-color: #000;
+  border: 1px solid #ccc;
+}

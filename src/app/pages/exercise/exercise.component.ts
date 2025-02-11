@@ -4,11 +4,10 @@ import { CommonModule } from '@angular/common';
 import { BoardComponent } from "./board/board.component";
 
 @Component({
-  selector: 'app-exercise',
-  standalone: true,
-  imports: [CommonModule, BoardComponent],
-  templateUrl: './exercise.component.html',
-  styleUrl: './exercise.component.scss'
+    selector: 'app-exercise',
+    imports: [CommonModule, BoardComponent],
+    templateUrl: './exercise.component.html',
+    styleUrl: './exercise.component.scss'
 })
 export class ExerciseComponent {
   allListSubject : any;

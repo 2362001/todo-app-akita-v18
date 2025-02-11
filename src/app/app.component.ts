@@ -3,11 +3,10 @@ import { SharedModule } from './common/common.module';
 import { LoadingComponent } from "./common/components/loading/loading.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [SharedModule, LoadingComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    imports: [SharedModule, LoadingComponent],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   isCollapsed = false;
