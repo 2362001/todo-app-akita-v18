@@ -7,3 +7,15 @@
     <button [className]="'button'" (click)="destroyComponent()">Delete Component</button>
   </div>
 </div>
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="container" style="border: 1px solid #ccc; background-color: #ccc; padding: 10px;">
+  <h2>Angular WebSocket Chat</h2>
+  <input [(ngModel)]="messageToSend" placeholder="Nhập tin nhắn..." />
+  <button (click)="sendMessage()">Gửi</button>
+  <button (click)="closeConnection()">Đóng kết nối</button>
+</div>

@@ -1,12 +1,15 @@
 import { Component, ComponentRef, ElementRef, inject, TemplateRef, viewChild, ViewContainerRef } from '@angular/core';
 import { WidgetComponent } from './widget/widget.component';
 import { WeatherContentComponent } from './widget/weather-content.component';
+import { WebsocketService } from './websocket.service';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../../common/common.module';
 
 @Component({
   selector: 'app-test-dynamic-component',
   templateUrl: './test-dynamic-component.component.html',
   styleUrl: './test-dynamic-component.component.scss',
-  imports: [WeatherContentComponent]
+  imports: [WeatherContentComponent, SharedModule , FormsModule]
 })
 
 export class TestDynamicComponentComponent {
@@ -38,5 +41,20 @@ export class TestDynamicComponentComponent {
 
   destroyComponent() {
     this.vcr()?.clear();
+  }
+
+  messageToSend: string = '';
+
+  constructor(private wsService: WebsocketService) {}
+
+  sendMessage() {
+    if (this.messageToSend.trim()) {
+      this.wsService.sendMessage(this.messageToSend);
+      this.messageToSend = ''; // Xóa input sau khi gửi
+    }
+  }
+
+  closeConnection() {
+    this.wsService.closeConnection();
   }
 }

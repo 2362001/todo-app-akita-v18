@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { SharedModule } from '../../common/common.module';
 import { SortingInterface, UserInterface, UsersServiceService } from './users-service.service';
 import { log } from 'console';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-test-paging-table',
@@ -31,7 +32,7 @@ export class TestPagingTableComponent {
   }
 
   fetchData(): void {
-    this.usersService.getUsers(this.sorting, this.searchValue).subscribe((users) => {
+    this.usersService.getUsers(this.sorting, this.searchValue).pipe(takeUntilDestroyed()).subscribe((users) => {
       this.users = users;
     });
   }
